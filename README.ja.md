@@ -1,56 +1,38 @@
-# ProcessingForKotlinTemplate
-KotlinでProcessingをやるときのテンプレート  
+# P5QRcodeWriter
+Processing(for Kotlin)で作成されたQRコード生成ツールです。  
+**QRコードは(株)デンソーウェーブの登録商標です**
 
 [En](./README.md) | Ja  
 
+## 使用ライブラリ
+- [shadow](https://github.com/johnrengelman/shadow) ([Apache License](http://www.apache.org/licenses/LICENSE-2.0))
+- [ZXing](https://github.com/zxing/zxing) ([Apache License](http://www.apache.org/licenses/LICENSE-2.0))
+
 ## 使い方
-### テンプレートのクローン
+### 入手
+#### プロジェクトのクローン
 ```bash
 mkdir Your_Project_Name
 cd Your_Project_Name
-git clone https://github.com/kota-shiokara/ProcessingForKotlinTemplate.git
+git clone https://github.com/kota-shiokara/P5QRcodeWriter.git
 ```
-
-### settings.gradleの修正
-```settings.gradle
-rootProject.name='Your_Project_Name'
-```
-
-### build.gradleの修正
-```build.gradle
-group 'Your_Group_Name'
-```
-
-### src/main/kotlin/main.ktの追記
-```kt
-class Main : PApplet(){
-                .
-                .
-    override fun setup() {
-        /* Write Your Code */
-    }
-
-    override fun draw() {
-        /* Write Your Code */
-    }
-                .
-                .
-```
-
-## ビルド
+#### プロジェクトのビルド
 ```bash
-./gradle shadow
-```
-or
-```
-gradle shadow
+./gradle shadow # Mac or Linux
+gradle shadow # Windows
 ```
 **出力ファイルはbuild/libs/以下に格納されます。**
 
-## Run
+#### もしくは
+#### 最新版のリリースをダウンロード
+最新版のリリースは、リリースセクションからダウンロードできます。
+
+### Run
 ```bash
-java -jar "Output_File_Name"
+java -jar "P5QRcodeWriter-{latest version}.jar" "Content"
 ```
+contentにはQRcodeにしたい文字列をいれてください。  
+なお、コマンドライン引数が無くても処理開始後にコンソールから入力可能です。
 
 ## 開発者情報
 - [kota-shiokara](https://github.com/kota-shiokara)

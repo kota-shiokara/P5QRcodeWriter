@@ -1,56 +1,38 @@
-# ProcessingForKotlinTemplate
-A template for doing "Processing" for Kotlin
+# P5QRcodeWriter
+This is a QR code generation tool created with Processing (for Kotlin).  
+**“QR Code” is a registered trademark of DENSO WAVE INCORPORATED.**
 
 En | [Ja](./README.ja.md)  
 
+## Use Library
+- [shadow](https://github.com/johnrengelman/shadow) ([Apache License](http://www.apache.org/licenses/LICENSE-2.0))
+- [ZXing](https://github.com/zxing/zxing) ([Apache License](http://www.apache.org/licenses/LICENSE-2.0))
+
 ## Usage
-### Clone template
+### Getting
+#### Clone this project
 ```bash
 mkdir Your_Project_Name
 cd Your_Project_Name
-git clone https://github.com/kota-shiokara/ProcessingForKotlinTemplate.git
+git clone https://github.com/kota-shiokara/P5QRcodeWriter.git
 ```
-
-### Edit settings.gradle
-```settings.gradle
-rootProject.name='Your_Project_Name'
-```
-
-### Edit build.gradle
-```build.gradle
-group 'Your_Group_Name'
-```
-
-### Edit src/main/kotlin/main.kt
-```kt
-class Main : PApplet(){
-                .
-                .
-    override fun setup() {
-        /* Write Your Code */
-    }
-
-    override fun draw() {
-        /* Write Your Code */
-    }
-                .
-                .
-```
-
-## Build
+#### Build this project
 ```bash
-./gradle shadow
-```
-or
-```
-gradle shadow
+./gradle shadow # Mac or Linux
+gradle shadow # Windows
 ```
 **The output file is stored under build/libs/.**
 
-## Run
+#### or
+#### Download the latest release
+You can download the latest release from the release section.
+
+### Run
 ```bash
-java -jar "Output_File_Name"
+java -jar "P5QRcodeWriter-{latest version}.jar"
 ```
+For the content, enter the string you want to use as QRcode.  
+It is possible to enter the string from the console after the process has started even without the command line argument.
 
 ## Author
 - [kota-shiokara](https://github.com/kota-shiokara)
