@@ -34,6 +34,12 @@ java -jar "P5QRcodeWriter-{latest version}.jar" "Content"
 contentにはQRcodeにしたい文字列をいれてください。  
 なお、コマンドライン引数が無くても処理開始後にコンソールから入力可能です。
 
+## 例
+下記の画像は生成例です。
+
+![image](./img/output.png)
+
+
 ## 開発者情報
 - [kota-shiokara](https://github.com/kota-shiokara)
 - Email: ikanoshiokara.fun@gmail.com

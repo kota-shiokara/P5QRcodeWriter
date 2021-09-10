@@ -29,10 +29,15 @@ You can download the latest release from the release section.
 
 ### Run
 ```bash
-java -jar "P5QRcodeWriter-{latest version}.jar"
+java -jar "P5QRcodeWriter-{latest version}.jar" "content"
 ```
 For the content, enter the string you want to use as QRcode.  
 It is possible to enter the string from the console after the process has started even without the command line argument.
+
+## Example
+The following image is an example of generation.
+
+![image](./img/output.png)
 
 ## Author
 - [kota-shiokara](https://github.com/kota-shiokara)

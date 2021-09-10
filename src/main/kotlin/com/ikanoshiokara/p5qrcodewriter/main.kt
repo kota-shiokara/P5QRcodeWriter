@@ -2,12 +2,12 @@ package com.ikanoshiokara.p5qrcodewriter
 
 import processing.core.*
 
-class QRCodeCreator : PApplet(){
+class QRCodeCreator : PApplet() {
     private lateinit var qrcode: PImage
 
     override fun settings() {
         size(500, 500)
-        var contents = if(args.isNotEmpty()){
+        var contents = if (args.isNotEmpty()) {
             args[0]
         } else {
             "にゃーん"
@@ -21,11 +21,15 @@ class QRCodeCreator : PApplet(){
 
     override fun draw() {
         image(qrcode, 0f, 0f)
+        save("img/output.png")
+        noLoop()
     }
 }
 
 fun main(args: Array<String>) {
-    var contents = if(args.isNotEmpty()){
+    var content = ""
+
+    content = if (args.isNotEmpty()) {
         args[0]
     } else {
         val console = System.console() ?: null
@@ -33,10 +37,10 @@ fun main(args: Array<String>) {
         console?.readLine() ?: readLine() ?: ""
     }
 
-    if(contents.isBlank()) {
-        contents = "にゃーん"
+    if (content.isBlank()) {
+        content = "にゃーん"
         println("にゃーん")
     }
 
-    PApplet.main(QRCodeCreator::class.java, contents)
+    PApplet.main(QRCodeCreator::class.java, content)
 }
