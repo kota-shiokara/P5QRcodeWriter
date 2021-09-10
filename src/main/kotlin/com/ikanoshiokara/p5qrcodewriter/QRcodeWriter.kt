@@ -1,3 +1,5 @@
+package com.ikanoshiokara.p5qrcodewriter
+
 // zxing
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
